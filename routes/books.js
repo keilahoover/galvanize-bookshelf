@@ -77,19 +77,4 @@ router.delete('/:id', (req, res, next) => {
   .catch((err) => console.log(err))
 })
 
-
-// router.delete('/:id', (req, res, next) => {
-//   const { id } = req.params
-//
-//   knex(bookTable)
-//     .del()
-//     .where('id', id)
-//     .returning('*')
-//     .then((rows) => {
-//       res.type('json')
-//       res.json(humps.camelizeKeys(rows[0]))
-//     })
-//     .catch((err) => console.log(err))
-// })
-
 module.exports = router;
