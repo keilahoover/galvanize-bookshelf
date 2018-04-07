@@ -8,7 +8,6 @@ var knex = require('../knex')
 var humps = require('humps')
 
 router.get('/', (req, res, next) => {
-  // res.send('GET all books')
   knex('books')
     .select('*')
     .then((rows) => rows.sort((title1, title2) => title1.title.toUpperCase() > title2.title.toUpperCase()))
